@@ -1,0 +1,71 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap"); */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Poppins, sans-serif !important;
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+button {
+  cursor: pointer;
+}
+select:focus {
+  border: 0;
+  outline: none;
+}
+
+.animateLeft {
+  animation-duration: 2s;
+  animation-name: animate_left;
+}
+@keyframes animate_left {
+  0% {
+    translate: -100px 0px;
+    opacity: 0;
+  }
+  100% {
+    transition: 0px 0px;
+    opacity: 1;
+  }
+}
+
+.animateRight {
+  animation-duration: 2s;
+
+  animation-name: animate_right;
+}
+@keyframes animate_right {
+  0% {
+    translate: 100px 0px;
+    opacity: 0;
+  }
+  100% {
+    transition: 0px 0px;
+    opacity: 1;
+  }
+}
+
+.animateTop {
+  animation-duration: 2s;
+
+  animation-name: animate_top;
+}
+@keyframes animate_top {
+  0% {
+    translate: 0px 100px;
+    opacity: 0;
+  }
+  100% {
+    transition: 0px 0px;
+    opacity: 1;
+  }
+}

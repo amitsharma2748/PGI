@@ -1,0 +1,103 @@
+@import "../Variables";
+
+
+.backdrop-modal{
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+.states-modal{
+    width: 84%;
+     left:8vw;
+    padding-left: 0;
+    background: white;
+    padding: 0.5rem 0;
+    position: absolute;
+    top: 183px;
+    color: $primary-black;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    
+        .states-list {
+
+            text-align: left;
+          font-size: 0.803em;
+          font-weight: 600;
+          list-style: disc;
+          margin-left: 2%;
+          margin-top: 5%;
+          li {
+            padding: 5px 0;
+            width: fit-content;
+    
+            font-family: $primary-font;
+          &:hover{
+              
+              color: $primary-red;
+              cursor: pointer;
+          }
+          }
+        }
+      }
+    
+    .modal-report{
+        text-align: left;
+        background: white;
+        
+        position: absolute;
+        display: block;
+        top: 183px;
+        left: 57%;
+        color: $primary-black;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+       
+        .text-btn{
+            padding: 10px 15px;
+            font-size: .875em;
+            font-weight: 500;
+            letter-spacing: .09px;
+            font-family: $primary-font;
+          &:hover{
+              background-color: $primary-white;
+              color: $primary-red;
+              cursor: pointer;
+          }
+        }
+      
+    }
+    .modal-categories{
+      text-align: left;
+      background: white;
+      
+      position: absolute;
+      display: block;
+      top: 183px;
+      left: 67%;
+      color: $primary-black;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+     
+      .text-btn{
+          padding: 10px 15px;
+          font-size: .87em;
+          font-weight: 500;
+          letter-spacing: .09px;
+          font-family: $primary-font;
+          &:hover{
+              background-color: $primary-white;
+              color: $primary-red;
+              cursor: pointer;
+          }
+      }
+    }
+    @media screen and (min-width: 0) and (max-width: $medium) {
+      .box__states-modal,.modal-report,.modal-categories {
+        display: none;
+        z-index: -1;
+      }
+    }

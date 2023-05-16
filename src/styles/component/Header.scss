@@ -1,0 +1,247 @@
+@import "../Variables";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.header-bottom {
+  display: flex;
+  color: $primary-black;
+  background: $primary-white;
+  flex-direction: column;
+  width: 100%;
+}
+.head {
+  display: flex;
+  flex-direction: column;
+  z-index: 1000;
+}
+.header {
+  padding: 0;
+  z-index: 1;
+  background: $primary-purple;
+  width: 100% !important;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 2s ease-in-out;
+
+  .header-top {
+    margin-top: 0px;
+
+    color: $primary-white;
+
+    .box {
+      @include flexCenter;
+
+      .btn-group {
+        @media screen and (min-width: 0) and (max-width: $medium) {
+          display: none;
+          z-index: -1;
+        }
+      }
+
+      .link {
+        @include flexCenter;
+        font-size: 0.7rem;
+      }
+
+      .main-icon {
+        border-top: $primary-black;
+        width: 100%;
+
+        @media screen and (min-width: $medium) {
+          display: none;
+          z-index: -1;
+        }
+      }
+    }
+  }
+
+  .img {
+    @include flexCenter;
+    // flex-wrap: wrap;
+    margin-top: 1.2rem;
+    margin-bottom: 1rem;
+    width: 90%;
+  }
+
+  .divider {
+    background: rgba(78, 78, 78, 0);
+    width: 100%;
+  }
+
+  .css-13eg511-MuiButtonBase-root-MuiListItemButton-root {
+    background-color: white;
+  }
+
+  .MuiMenu-list {
+    width: 800px !important;
+  }
+}
+
+.navbar {
+  padding: 0;
+
+  background-color: white !important;
+  width: 100%;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 2s ease-in-out;
+  .MuiContainer-root {
+    background-color: inherit;
+  }
+
+  .header-top {
+    margin-top: 0px;
+    color: $primary-black;
+
+    .box {
+      @include flexCenter;
+      width: "100%";
+
+      .link {
+        @include flexCenter;
+        font-size: 0.7rem;
+      }
+
+      .main-icon {
+        border-top: $primary-black;
+        width: 100%;
+      }
+    }
+  }
+
+  .img {
+    @include flexCenter;
+    // flex-wrap: wrap;
+    margin-top: 1.2rem;
+    margin-bottom: 1rem;
+  }
+
+  .divider {
+    background: rgba(78, 78, 78, 0);
+    width: 100%;
+  }
+
+  .bottom-header {
+    color: $primary-black;
+    z-index: -1;
+
+    .text-btn {
+      background-color: $primary-red;
+    }
+    ul {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      list-style-type: none;
+      .btn {
+        display: flex;
+        padding: 1.5vh 1.2vh;
+        &:hover {
+          background: $primary-red;
+          color: white;
+        }
+      }
+      li{
+        cursor: pointer;
+      
+      }
+    }
+  }
+
+  .MuiButtonBase-root-MuiListItemButton-root {
+    background-color: white;
+  }
+
+  .MuiMenu-list {
+    width: 800px !important;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+
+.MuiAppBar-root {
+  position: sticky !important;
+  top: 0 !important;
+}
+
+.MuiContainer-root {
+  padding-left: 0px;
+}
+
+.modal {
+  position: absolute;
+  top: 50px;
+  min-width: 100% !important;
+  background-color: $primary-white;
+  color: $primary-black;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  z-index: 10000;
+
+  .status-indux-head {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background-color: $primary-white;
+    padding: 5vw 5vw;
+    margin: 1.5vw 2vw;
+    .States-grid {
+      .states-list {
+        font-size: 0.9rem;
+        font-weight: 500;
+        list-style: disc;
+
+        li {
+          padding-bottom: 1.8vw;
+
+          &:hover {
+            color: $primary-red;
+          }
+        }
+      }
+    }
+  }
+
+  .list-btn {
+    height: 100%;
+    width: 100%;
+
+    &:focus-visible {
+      background-color: $primary-red;
+      color: $primary-white;
+    }
+
+    &:hover {
+      background-color: $primary-red;
+      color: $primary-white;
+    }
+  }
+}
+.state-index-menu {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+  .text-btn {
+    padding: 5px 9px !important;
+    &:hover {
+      color: $primary-red;
+    }
+  }
+
+  .text-item {
+    text-align: left;
+  }
+}
+
+@media screen and (min-width: 0) and (max-width: $medium) {
+  .bottom-header {
+    display: none;
+    z-index: -1;
+  }
+  .MuiAppBar-root {
+    position: relative !important;
+    top: 0 !important;
+  }
+}
+@media screen and (min-width: $medium) {
+  .main-menu-list {
+    display: none;
+  }
+}

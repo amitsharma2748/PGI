@@ -1,0 +1,13 @@
+@mixin flexCenter() {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+$primary-red: #d94148;
+$primary-white: #f8f9fa;
+$primary-purple: #383876;
+$secondary-purple: #2f2f65;
+$primary-black: #131523;
+$small: 300px;
+$medium: 900px;
+$primary-font: Poppins,sans-serif;

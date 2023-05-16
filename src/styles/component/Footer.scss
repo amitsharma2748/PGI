@@ -1,0 +1,103 @@
+@import "../Variables";
+.footer {
+  padding-top: 60px;
+
+  .footer-top {
+    justify-content: center;
+   
+    .content {
+      text-align: center;
+      margin-top: 2vh;
+      font-size: 1.03em;
+      font-weight: 400;
+      line-height: 1.5;
+      padding: 10px 0;
+      color: $primary-black;
+    }
+  }
+  .data-source {
+    margin-top: 4vh;
+    text-align: left;
+    .header {
+      z-index: -1;
+      padding-top: 7vh;
+      font-size: 1.5em;
+      font-weight: 600;
+      letter-spacing: 0.1px;
+      background-color: white;
+      line-height: 1.2;
+      font-family: $primary-font;
+    }
+    .content {
+      z-index: -1;
+   
+      color: $primary-black;
+      font-size: 1.005em;
+      line-height: 1.5;
+      font-weight: 400;
+      padding-top: 3vh;
+      font-family: $primary-font;
+    }
+    .MuiGrid-item {
+      padding-top: 0 !important;
+    }
+  }
+}
+
+.linksfooter {
+  margin-top: 4em !important;
+  text-align: left;
+  font-family: $primary-font;
+  padding: 60px 0;
+  color: $primary-white;
+  background-color: $primary-purple;
+  .link {
+    color: #fff;
+    font-size: 1.125em;
+    font-weight: 500;
+    letter-spacing: 0.07px;
+  }
+  .about-pgid {
+    list-style-type: ">";
+ 
+    font-weight: 400;
+    padding-top: 2vh;
+    line-height: 2;
+    letter-spacing: 0.14px;
+    font-size: 0.875em;
+    li {
+      &:hover {
+        color: $primary-red;
+      }
+    }
+    .about-pgid-nested {
+      list-style-type: disc;
+      padding-left: 16px;
+      line-height: 2;
+      letter-spacing: 0.14px;
+      font-size: 0.85em;
+      color: #fff;
+    }
+  }
+  .about-pgid-nested-nic {
+    padding-top: 3vh;
+    letter-spacing: 0.14px;
+    font-size: 0.75em;
+    margin-bottom: 0px !important;
+  }
+}
+.footer-bottom {
+  color: $primary-white;
+  background-color: $secondary-purple;
+  padding: 10px 0;
+  font-family: $primary-font;
+  display: flex;
+  align-items: center;
+
+  .text-footer {
+    font-family: $primary-font;
+    font-size: 0.77em;
+    letter-spacing: 0.37px;
+    padding: 0 4vw;
+  }
+}

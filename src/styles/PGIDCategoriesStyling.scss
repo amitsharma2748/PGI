@@ -1,0 +1,142 @@
+.pgid-card {
+  width: 21vw;
+  border-radius: 6px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 10px;
+  background-color: white;
+  cursor: context-menu;
+  text-align: left;
+  padding: 20px;
+  transition: background 0.3s ease;
+  & > h2 {
+    -webkit-box-orient: vertical;
+    color: #131523;
+    font-size: 1.125em;
+    font-weight: 700;
+    letter-spacing: 0.07px;
+    line-height: 1.4;
+    margin: 5px 0;
+  }
+  & > p {
+    font-size: 0.9em;
+    letter-spacing: 0;
+    line-height: 1.6;
+    margin: 0;
+    font-weight: 400;
+  }
+  & > span {
+    cursor: pointer;
+    color: #e4212b;
+    position: relative;
+    font-size: 0.813em;
+    & > .right-icon {
+      transform: translate(-20%, 28%);
+      transition: transform 0.2s ease-in;
+    }
+    &:hover > .right-icon {
+      transform: translate(4%, 28%);
+    }
+  }
+  &:hover {
+    background-color: #d94148;
+    color: white;
+    & > h2 {
+      color: white;
+    }
+    & > span {
+      color: white;
+    }
+    & > svg {
+      fill: white;
+    }
+  }
+}
+
+.categories-and-card {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 2em;
+  width: 80vw;
+  margin: auto;
+  padding: 5em 0 15em;
+  .cards-section {
+    display: grid;
+    width: 80vw;
+    margin: auto;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    gap: 3em;
+    .pgid-card:nth-child(1),
+    .pgid-card:nth-child(4) {
+      transform: translateY(50%);
+    }
+    .pgid-card:nth-child(3),
+    .pgid-card:nth-child(6) {
+      transform: translateY(-50%);
+    }
+  }
+}
+
+.categories-text-content {
+  max-width: 48vw;
+  text-align: left;
+  & > p {
+    color: #131523;
+    font-size: 1em;
+    letter-spacing: 0;
+    line-height: 1.5;
+    margin: 0;
+    padding: 10px 0;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .categories-text-content {
+    max-width: 80vw;
+  }
+
+  .categories-and-card {
+    padding-bottom: 5em;
+    .cards-section {
+      gap: 1.5em;
+
+      .pgid-card {
+        width: 22vw;
+
+        &:nth-child(3),
+        &:nth-child(6) {
+          transform: translateY(0%);
+        }
+        &:nth-child(1),
+        &:nth-child(4) {
+          transform: translateY(0%);
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .categories-and-card .cards-section {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .pgid-card {
+    min-width: 80vw;
+  }
+
+  .categories-text-content {
+    max-width: 80vw;
+    text-align: left;
+    & > h1 {
+      font-size: 2em;
+    }
+    & > p {
+      font-size: 0.9em;
+    }
+  }
+}
